@@ -1,3 +1,6 @@
+<img width="1366" height="768" alt="screenshot-2026-01-01_21-31-33" src="https://github.com/user-attachments/assets/d70a14c0-42be-4b3c-8006-19aa7acebf8a" />
+<img width="1366" height="768" alt="satty-20260101-150733" src="https://github.com/user-attachments/assets/51527b8b-8235-4e97-99ea-790ef0eb39ae" />
+<img width="1350" height="768" alt="satty-20260101-113340" src="https://github.com/user-attachments/assets/6e133f93-4484-4d5a-b955-e0c1fb63715c" />
 # 🪟 OmGlass OS
 **Elevating Omarchy UI to the Next Level**
 
