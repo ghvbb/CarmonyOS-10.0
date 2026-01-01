@@ -1,0 +1,50 @@
+# 🪟 OmGlass OS
+**Elevating Omarchy UI to the Next Level**
+
+OmGlass OS is a premium UI redesign for Omarchy. While the original Omarchy focuses on stability and reliability, OmGlass is built for those who crave aesthetics without compromising performance.
+
+Developed over 4 weeks of intensive design work, OmGlass introduces the **Liquid Glass Style**—a unique blend of the sleek **macOS Tahoe** aesthetic and the powerful foundations of Omarchy.
+
+---
+
+## 🚩 The Mission: MON-Project
+OmGlass is a core component of the **MON-Project** (*Mission: Kill North Windows*). 
+
+Our goal is clear: **Liberate Windows users** and migrate them to the superior world of Linux.  
+> *"جبهة تحرير شمال ويندوز"* 🕊️
+
+*Stay tuned: **MOF** (Mission: Kill Mac) is coming soon.*
+
+---
+
+## ✨ Features
+- **Liquid Glass Aesthetic:** A modern, translucent UI inspired by glassmorphism.
+- **macOS Tahoe Influence:** Smooth animations and elegant layouts.
+- **Optimized for Hyprland:** Lightweight, fast, and highly customizable.
+- **Stability + Style:** Built on top of Omarchy's reliable core.
+
+---
+
+## 🛠️ Project Structure
+This repository contains the configuration files for **Hyprland**, **Walker**, and **Waybar**.
+
+### 1. Hyprland (The Core)
+Located in `~/.config/hypr`:
+- `hyprland.conf` & `looknfeel.conf` (Visuals & Logic)
+- `bindings.conf` & `input.conf` (Controls)
+- `hyprlock.conf` & `hypridle.conf` (Security & Power)
+- `omarchy-control.py` (System Integration)
+
+### 2. Waybar (Status Bar)
+Located in `~/.config/waybar`:
+- `config.jsonc`
+- `style.css`
+
+### 3. Walker (App Launcher)
+Located in `~/.local/share/omarchy/default/walker/themes/omarchy-default`:
+- `layout.xml`
+- `style.css`
+
+*Created By ghvbb + dhh omarchy OS*
+
+---
