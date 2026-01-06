@@ -1,10 +1,12 @@
 <img width="1366" height="768" alt="screenshot-2026-01-01_21-31-33" src="https://github.com/user-attachments/assets/d70a14c0-42be-4b3c-8006-19aa7acebf8a" />
 <img width="1366" height="768" alt="satty-20260101-150733" src="https://github.com/user-attachments/assets/51527b8b-8235-4e97-99ea-790ef0eb39ae" />
 <img width="1350" height="768" alt="satty-20260101-113340" src="https://github.com/user-attachments/assets/6e133f93-4484-4d5a-b955-e0c1fb63715c" />
-# 🪟 OmGlass OS
+# OmGlass OS
+
+
 **Elevating Omarchy UI to the Next Level**
 
-OmGlass OS is a premium UI redesign for Omarchy. While the original Omarchy focuses on stability and reliability, OmGlass is built for those who crave aesthetics without compromising performance.
+OmGlass OS is a pro UI redesign for Omarchy. While the original Omarchy focuses on stability and reliability, OmGlass is built for those who crave aesthetics without compromising performance.
 
 Developed over 4 weeks of intensive design work, OmGlass introduces the **Liquid Glass Style**—a unique blend of the sleek **macOS Tahoe** aesthetic and the powerful foundations of Omarchy.
 
@@ -48,6 +50,6 @@ Located in `~/.local/share/omarchy/default/walker/themes/omarchy-default`:
 - `layout.xml`
 - `style.css`
 
-*Created By ghvbb + dhh omarchy OS*
+*Created By ghvbb*
 
 ---
