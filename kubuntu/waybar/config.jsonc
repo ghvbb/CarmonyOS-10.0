@@ -45,13 +45,12 @@
   },
   "custom/kubuntu": {
     "format": "<span>Apps</span>",
-    "on-click": "omarchy-menu",
-    "on-click-right": "xdg-terminal-exec",
+    "on-click": "wofi --show drun",
     "tooltip-format": "OmGlass Menu\n\nWIN + I wofi"
   },
   "custom/update": {
     "format": "",
-    "exec": "~/.config/hypr/update.sh",
+    "exec": "sh ~/.config/hypr/update.sh",
     "on-click": "sh ~/.config/hypr/ui.sh",
     "tooltip-format": "OmGlass update Checker",
     "signal": 7,
