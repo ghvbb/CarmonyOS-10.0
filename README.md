@@ -1,6 +1,4 @@
-<img width="1366" height="768" alt="screenshot-2026-01-01_21-31-33" src="https://github.com/user-attachments/assets/d70a14c0-42be-4b3c-8006-19aa7acebf8a" />
 <img width="1366" height="768" alt="satty-20260101-150733" src="https://github.com/user-attachments/assets/51527b8b-8235-4e97-99ea-790ef0eb39ae" />
-<img width="1350" height="768" alt="satty-20260101-113340" src="https://github.com/user-attachments/assets/6e133f93-4484-4d5a-b955-e0c1fb63715c" />
 # OmGlass OS
 
 
@@ -49,6 +47,22 @@ Located in `~/.config/waybar`:
 Located in `~/.local/share/omarchy/default/walker/themes/omarchy-default`:
 - `layout.xml`
 - `style.css`
+
+## Kubuntu-Version :
+<img width="1366" height="768" alt="satty-20260101-150733" src="https://github.com/user-attachments/assets/51527b8b-8235-4e97-99ea-790ef0eb39ae" />
+
+## Omarchy-Version :
+<img width="1366" height="768" alt="satty-20260101-150733" src="https://github.com/user-attachments/assets/51527b8b-8235-4e97-99ea-790ef0eb39ae" />
+
+## NargatoBar + Colors++ Omarchy (Comming Soon) :
+
+<img width="1366" height="768" alt="satty-20260113-154715" src="https://github.com/user-attachments/assets/e7df0685-1c8f-4e1d-bf56-05136fc6bdd4" />
+
+
+## Fedora Version:
+<img width="1366" height="768" alt="satty-20260113-174539" src="https://github.com/user-attachments/assets/74a08cee-bcb4-41bf-a374-a28d846a2547" />
+<img width="1365" height="768" alt="satty-20260113-174528" src="https://github.com/user-attachments/assets/4fffdee3-e1b7-4c91-a3b5-c8563febf1bf" />
+
 
 *Created By ghvbb*
 
