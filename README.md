@@ -1,4 +1,3 @@
-<img width="1366" height="768" alt="satty-20260101-150733" src="https://github.com/user-attachments/assets/51527b8b-8235-4e97-99ea-790ef0eb39ae" />
 # OmGlass OS
 
 
