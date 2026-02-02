@@ -1,11 +1,11 @@
-# OmGlass OS 7.0
+# CarmonyOS 10.0
 
 
 **Elevating Omarchy UI to the Next Level**
 
-OmGlass OS is a pro UI redesign for Linux Distros and (Omarhcy) . While the original Distros focuses on stability and reliability, OmGlass is built for those who crave aesthetics without compromising performance.
+OmGlass OS is a pro UI redesign for Linux Distros and (Omarhcy) . While the original Distros focuses on stability and reliability, CarmonyOS is built for those who crave aesthetics without compromising performance.
 
-Developed over 6 weeks of intensive design work, OmGlass introduces the **Liquid Glass Style**—a unique blend of the sleek **Glass Style** aesthetic and the powerful foundations of Omarchy.
+Developed over 6 weeks of intensive design work, Carmony introduces the **Transparent & Prodictivity**—a unique blend of the sleek **Glass Style** aesthetic and the powerful foundations of Omarchy , EndeavorOS, Arch Linux, And More.
 
 ---
 
@@ -15,16 +15,25 @@ OmGlass is a core component of the **MON-Project** (*Mission: Kill North Windows
 Our goal is clear: **Liberate Windows users** and migrate them to the superior world of Linux.  
 > *"جبهة تحرير شمال ويندوز"* 🕊️
 
-*Stay tuned: **MOF** (Mission: Kill Mac) is coming soon.*
+*Stay tuned: **MOF** (Mission: Kill Mac) Which Is With The CarmonyOS + OmGlass That Make A big  And Strong Cocked !*
 
+Our Goal is  clear : **MOF** (Mission Kill MacOS) That Shi*t which is  MacOS kills the  freedoom , but with CarmonyOS Open It Again But With GUI + Really Great Style
 ---
 
 ## ✨ Features
 - **Liquid Glass Aesthetic:** A modern, translucent UI inspired by glassmorphism.
 - **macOS Tahoe Influence:** Smooth animations and elegant layouts.
 - **Optimized for Hyprland:** Lightweight, fast, and highly customizable.
-- **Stability + Style:** Built on top of Omarchy's reliable core.
+- **Stability + Comunity:** Our Dotfiles Bulit By A comunity Called : r/OmGlass which is  an Great Comunity That Loves Us for e.g @locas
 
+
+## Supported Distros !
+
+- **CarmonyOS**: ** will relases is Comming Soon In Ramadan (: , Based On Arch Linux
+- **EndeavroOS**: ** A stable Distro Based On Arch That Comes With Great Style
+- **Ubuntu**: We Support Ubuntu Based Distros Like For e.g : Kubuntu , Ubuntu Server etc ,,, 
+- **Fedora**: On Dec 27 We Decided To close The Support Of Fedora , But the Comunity Support Us With A Really Great Files e.g : clock.py , waybar/themes/nargatoBar/config.jsonc
+We Decided To Support It Again With  a  great animations 89% Like On Arch Linux
 ---
 
 ## 🛠️ Project Structure
@@ -38,31 +47,32 @@ Located in `~/.config/hypr`:
 - `omarchy-control.py` (System Integration)
 
 ### 2. Waybar (Status Bar)
-Located in `~/.config/waybar`:
-- `config.jsonc`
-- `style.css`
+Located in `~/.config/waybar/`:
+A lot Of themes ! - `/themes`
+A scripts For Waybar ! - `/scripts`
 
 ### 3. Walker (App Launcher)
 Located in `~/.local/share/omarchy/default/walker/themes/omarchy-default`:
 - `layout.xml`
 - `style.css`
 
+## 4. Rofi (App Launcher)
 ## ubuntu-Version :
-<img width="1366" height="768" alt="satty-20260113-181717" src="https://github.com/user-attachments/assets/4c720dd1-c7b7-4f4d-9222-39bd0d3992fe" />
+<img width="1363" height="768" alt="2026-02-02-132603_hyprshot" src="https://github.com/user-attachments/assets/18f77835-4093-4dec-acd4-3e3e28aec97a" />
 
 ## Omarchy-Version :
-<img width="1366" height="768" alt="satty-20260113-181949" src="https://github.com/user-attachments/assets/41af10eb-1613-4143-9be5-26a44598f078" />
 
-## NargatoBar + Colors++ Omarchy (Comming Soon) :
+'No Photo Relases Now' .
 
-<img width="1366" height="768" alt="satty-20260113-154715" src="https://github.com/user-attachments/assets/e7df0685-1c8f-4e1d-bf56-05136fc6bdd4" />
+## EndeavorOS + Arch Version :
+
+<img width="1366" height="767" alt="2026-02-01-215900_hyprshot" src="https://github.com/user-attachments/assets/89bb48a9-584a-4571-93e9-96173f690185" />
 
 
 ## Fedora Version:
-<img width="1366" height="768" alt="satty-20260113-174539" src="https://github.com/user-attachments/assets/74a08cee-bcb4-41bf-a374-a28d846a2547" />
-<img width="1365" height="768" alt="satty-20260113-174528" src="https://github.com/user-attachments/assets/4fffdee3-e1b7-4c91-a3b5-c8563febf1bf" />
+<img width="1363" height="768" alt="2026-02-02-132603_hyprshot" src="https://github.com/user-attachments/assets/d442b54b-d973-4c0a-9c84-466508aaa815" />
 
 
-*Created By ghvbb*
+*Created By ghvbb , locas*
 
 ---
