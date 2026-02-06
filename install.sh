@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-#OmGlass 7.0 Version Of Installer Bro ! 
+#CarmonyOS Version 11.2 ! 
+
 RESET="\e[0m"
 BOLD="\e[1m"
 DIM="\e[2m"
@@ -25,13 +26,13 @@ DARK_GRAY="\e[38;5;238m"
 LIGHT_BLUE="\e[38;5;117m"
 GOLD="\e[38;5;220m"
 
-VERSION="7.0"
-CODENAME="Ultimate Edition"
+VERSION="11.2"
+CODENAME="CarmonyOS Edition"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="$HOME/.config"
 LOCAL_SHARE_DIR="$HOME/.local/share"
-BACKUP_DIR="$HOME/.omglass-backup-$(date +%Y%m%d-%H%M%S)"
-LOG_FILE="/tmp/omglass-install-$(date +%Y%m%d-%H%M%S).log"
+BACKUP_DIR="$HOME/.CarmonyOS-backup-$(date +%Y%m%d-%H%M%S)"
+LOG_FILE="/tmp/CarmonyOS-Installer-$(date +%Y%m%d-%H%M%S).log"
 
 SELECTED_DISTRO=""
 INSTALL_GUI_DEPS=false
@@ -213,14 +214,13 @@ print_box_end() {
 print_logo() {
     echo ""
     echo -e "${PURPLE}${BOLD}"
-    print_centered "   ▄██████▄    ▄▄▄▄███▄▄▄▄       ▄██████▄   ▄█          ▄████████    ▄████████    ▄████████ "
-    print_centered "  ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███ ███         ███    ███   ███    ███   ███    ███ "
-    print_centered "  ███    ███ ███   ███   ███   ███    █▀  ███         ███    ███   ███    █▀    ███    █▀  "
-    print_centered "  ███    ███ ███   ███   ███  ▄███        ███         ███    ███   ███          ███        "
-    print_centered "  ███    ███ ███   ███   ███ ▀▀███ ████▄  ███       ▀███████████ ▀███████████ ▀███████████ "
-    print_centered "  ███    ███ ███   ███   ███   ███    ███ ███         ███    ███          ███          ███ "
-    print_centered "  ███    ███ ███   ███   ███   ███    ███ ███▌    ▄   ███    ███    ▄█    ███    ▄█    ███ "
-    print_centered "   ▀██████▀   ▀█   ███   █▀    ████████▀  █████▄▄██   ███    █▀   ▄████████▀   ▄████████▀  "
+    
+print_centerd"   ██████╗ █████╗ ██████╗ ███╗   ███╗ ██████╗ ███╗   ██╗██╗   ██╗ ██████╗ ███████╗"
+print_centerd"  ██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔═══██╗████╗  ██║╚██╗ ██╔╝██╔═══██╗██╔════╝"
+print_centerd" ██║     ███████║██████╔╝██╔████╔██║██║   ██║██╔██╗ ██║ ╚████╔╝ ██║   ██║███████╗"
+print_centerd"  ██║     ██╔══██║██╔══██╗██║╚██╔╝██║██║   ██║██║╚██╗██║  ╚██╔╝  ██║   ██║╚════██║"
+print_centerd"  ╚██████╗██║  ██║██║  ██║██║ ╚═╝ ██║╚██████╔╝██║ ╚████║   ██║   ╚██████╔╝███████║"
+print_centerd"   ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚══════╝"
     echo -e "${RESET}"
     echo ""
     print_gradient_line
@@ -235,8 +235,8 @@ print_logo() {
 print_mini_logo() {
     echo ""
     echo -e "${PURPLE}${BOLD}"
-    print_centered "█▀█ █▀▄▀█ █▀▀ █   ▄▀█ █▀ █▀"
-    print_centered "█▄█ █ ▀ █ █▄█ █▄▄ █▀█ ▄█ ▄█"
+    print_centered "CARMONY/UI"
+    print_centered "CONFIG FILE FOR LINUX"
     echo -e "${RESET}"
     print_centered "━━━━━━━━━━━━━━━━━━━━━━━━━━━" "${PURPLE}"
     print_centered "v${VERSION} │ ${CODENAME}" "${DIM}${GRAY}"
@@ -499,14 +499,11 @@ show_package_preview() {
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Status Bar${RESET}          ${GRAY}waybar${RESET}" "$CYAN"
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Wallpaper Engine${RESET}    ${GRAY}swww${RESET}" "$CYAN"
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Terminal${RESET}            ${GRAY}kitty${RESET}" "$CYAN"
-    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}File Manager${RESET}        ${GRAY}nautilus${RESET}" "$CYAN"
-    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Launcher${RESET}            ${GRAY}wofi${RESET}" "$CYAN"
-    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Browser${RESET}             ${GRAY}firefox${RESET}" "$CYAN"
+    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}File Manager${RESET}        ${GRAY}thunar${RESET}" "$CYAN"
+    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Launcher${RESET}            ${GRAY}rofi${RESET}" "$CYAN"
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Media Player${RESET}        ${GRAY}mpv${RESET}" "$CYAN"
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Image Viewer${RESET}        ${GRAY}imv${RESET}" "$CYAN"
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}System Monitor${RESET}      ${GRAY}btop${RESET}" "$CYAN"
-    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Recording${RESET}           ${GRAY}obs-studio${RESET}" "$CYAN"
-    print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Notes${RESET}               ${GRAY}obsidian${RESET}" "$CYAN"
     print_box_content "${MAGENTA}●${RESET} ${WHITE}${BOLD}Utilities${RESET}           ${GRAY}jq, imagemagick, gtk3, gtk4${RESET}" "$CYAN"
     print_box_separator "$CYAN"
     print_box_content "${PINK}●${RESET} ${WHITE}${BOLD}Fonts${RESET}               ${GRAY}JetBrains Mono Nerd Font${RESET}" "$CYAN"
@@ -530,9 +527,7 @@ show_config_preview() {
     print_box_empty "$GREEN"
     print_box_content "${CYAN}📂${RESET} ${WHITE}${BOLD}hypr/${RESET}                ${GRAY}→ ~/.config/hypr/${RESET}" "$GREEN"
     print_box_content "   ${DIM}├── hyprland.conf, hyprlock.conf, hypridle.conf${RESET}" "$GREEN"
-    print_box_content "   ${DIM}├── bindings.conf, autostart.conf, monitors.conf${RESET}" "$GREEN"
-    print_box_content "   ${DIM}├── looknfeel.conf, input.conf, xdph.conf${RESET}" "$GREEN"
-    print_box_content "   ${DIM}└── omarchy-control.py → .desktop file${RESET}" "$GREEN"
+    print_box_content "   ${DIM}└── CarmonyOS.py → .desktop file${RESET}" "$GREEN"
     print_box_empty "$GREEN"
     print_box_content "${CYAN}📂${RESET} ${WHITE}${BOLD}kitty/${RESET}               ${GRAY}→ ~/.config/kitty/${RESET}" "$GREEN"
     print_box_content "   ${DIM}└── kitty.conf${RESET}" "$GREEN"
@@ -807,12 +802,9 @@ install_arch_packages() {
         "gtk4"
         "gtk3"
         "kitty"
-        "nautilus"
-        "wofi"
+        "thunar"
+        "rofi"
         "btop"
-        "firefox"
-        "obs-studio"
-        "obsidian"
         "mpv"
         "imv"
         "gnome-disk-utility"
@@ -820,6 +812,7 @@ install_arch_packages() {
         "wget"
         "gvfs"
         "gvfs-mtp"
+	"swayosd"
     )
     
     if [[ "$INSTALL_GUI_DEPS" == true ]]; then
@@ -904,7 +897,7 @@ install_ubuntu_packages() {
         "libgtk-3-0"
         "kitty"
         "nautilus"
-        "wofi"
+        "rofi"
         "btop"
         "firefox"
         "obs-studio"
@@ -912,6 +905,7 @@ install_ubuntu_packages() {
         "imv"
         "gvfs"
         "gvfs-backends"
+	"swayosd"
     )
     
     if [[ "$INSTALL_GUI_DEPS" == true ]]; then
@@ -1011,12 +1005,13 @@ install_fedora_packages() {
         "hyprsunset"
         "waybar"
         "jq"
-        "ImageMagick"
+	"rofi"
+        "imagemagick"
         "swww"
         "gtk4"
         "gtk3"
         "kitty"
-        "nautilus"
+        "thunar"
         "btop"
         "firefox"
         "obs-studio"
@@ -1024,6 +1019,7 @@ install_fedora_packages() {
         "mpv"
         "imv"
         "gvfs"
+	"swayosd"
     )
     
     if [[ "$INSTALL_GUI_DEPS" == true ]]; then
@@ -1075,12 +1071,12 @@ install_gui_python_deps() {
 }
 
 create_desktop_file() {
-    local py_file="$CONFIG_DIR/hypr/omarchy-control.py"
+    local py_file="$CONFIG_DIR/hypr/CarmonyOS.py"
     local desktop_dir="$HOME/.local/share/applications"
-    local desktop_file="$desktop_dir/omarchy-control.desktop"
+    local desktop_file="$desktop_dir/carmonyos.desktop"
     
     echo ""
-    print_step "Setting up omarchy-control.py..."
+    print_step "Setting up Settings App..."
     
     if [[ -f "$py_file" ]]; then
         mkdir -p "$desktop_dir"
@@ -1089,19 +1085,19 @@ create_desktop_file() {
         
         cat > "$desktop_file" << EOF
 [Desktop Entry]
-Name=Omarchy Control
-Comment=OmGlass Hyprland Control Panel
+Name=Settings
+Comment=CarmonyOS  Control Panel
 Exec=python3 $py_file
 Icon=preferences-system
 Terminal=false
 Type=Application
 Categories=Settings;System;
-Keywords=hyprland;control;settings;omarchy;omglass;
+Keywords=hyprland;control;settings;carmonyos;carmonyui;
 StartupNotify=true
 EOF
         
-        print_success "Created: ${DIM}~/.local/share/applications/omarchy-control.desktop${RESET}"
-        print_success "omarchy-control.py is now executable"
+        print_success "Created: ${DIM}~/.local/share/applications/carmonyos.desktop${RESET}"
+        print_success "CarmonyOS.py is now executable"
     else
         print_warning "omarchy-control.py not found in configs"
     fi
@@ -1277,15 +1273,14 @@ show_completion() {
     print_box "⌨️  KEYBOARD SHORTCUTS" "$BLUE"
     print_box_empty "$BLUE"
     print_box_content "${GOLD}${BOLD}  SUPER + Space${RESET}          ${GRAY}│${RESET}  ${WHITE}Open Application Launcher${RESET}" "$BLUE"
-    print_box_content "${GOLD}${BOLD}  SUPER + Q${RESET}              ${GRAY}│${RESET}  ${WHITE}Open Terminal (Kitty)${RESET}" "$BLUE"
-    print_box_content "${GOLD}${BOLD}  SUPER + SHIFT + F${RESET}      ${GRAY}│${RESET}  ${WHITE}Open File Manager (Nautilus)${RESET}" "$BLUE"
-    print_box_content "${GOLD}${BOLD}  SUPER + CTRL + T${RESET}       ${GRAY}│${RESET}  ${WHITE}Open System Monitor (btop)${RESET}" "$BLUE"
+    print_box_content "${GOLD}${BOLD}  SUPER + Enter${RESET}              ${GRAY}│${RESET}  ${WHITE}Open Terminal (Kitty)${RESET}" "$BLUE"
+    print_box_content "${GOLD}${BOLD}  SUPER + SHIFT + F${RESET}      ${GRAY}│${RESET}  ${WHITE}Open File Manager (Thunar)${RESET}" "$BLUE"
     print_box_content "${GOLD}${BOLD}  SUPER + F${RESET}              ${GRAY}│${RESET}  ${WHITE}Toggle Fullscreen${RESET}" "$BLUE"
-    print_box_content "${GOLD}${BOLD}  SUPER + W${RESET}              ${GRAY}│${RESET}  ${WHITE}Close Active Window${RESET}" "$BLUE"
+    print_box_content "${GOLD}${BOLD}  SUPER + Q${RESET}              ${GRAY}│${RESET}  ${WHITE}Close Active Window${RESET}" "$BLUE"
     print_box_separator "$BLUE"
     print_box_content "${GOLD}${BOLD}  SUPER + L${RESET}              ${GRAY}│${RESET}  ${WHITE}Lock Screen${RESET}" "$BLUE"
-    print_box_content "${GOLD}${BOLD}  SUPER + SHIFT + E${RESET}      ${GRAY}│${RESET}  ${WHITE}Exit Hyprland${RESET}" "$BLUE"
-    print_box_content "${GOLD}${BOLD}  SUPER + SHIFT + R${RESET}      ${GRAY}│${RESET}  ${WHITE}Reload Hyprland Config${RESET}" "$BLUE"
+    print_box_content "${GOLD}${BOLD}  SUPER + SHIFT + M${RESET}      ${GRAY}│${RESET}  ${WHITE}Exit Hyprland${RESET}" "$BLUE"
+    print_box_content "${GOLD}${BOLD}  SUPER + ESC${RESET}      ${GRAY}│${RESET}  ${WHITE}Opens Logout Menu${RESET}" "$BLUE"
     print_box_empty "$BLUE"
     print_box_end "$BLUE"
     
@@ -1293,8 +1288,8 @@ show_completion() {
     print_sparkle_line
     echo ""
     
-    print_centered "Thank you for using OmGlass Manager ${VERSION}!" "${BOLD}${MAGENTA}"
-    print_centered "Made by ghvbb for the Linux community" "${DIM}${WHITE}"
+    print_centered "Thank you for using CarmonyOS Config ${VERSION}!" "${BOLD}${MAGENTA}"
+    print_centered "Made by ghvbb & locas for the Linux community" "${DIM}${WHITE}"
     
     echo ""
     
@@ -1387,7 +1382,7 @@ check_root() {
         echo ""
         echo -e "  ${RED}${BOLD}╔═══════════════════════════════════════════════════════════════════╗${RESET}"
         echo -e "  ${RED}${BOLD}║                                                                   ║${RESET}"
-        echo -e "  ${RED}${BOLD}║   ⚠️  ERROR: Do not run this script as root!                      ║${RESET}"
+        echo -e "  ${RED}${BOLD}║   ⚠️  ERROR: Do not run this script as root!                       ║${RESET}"
         echo -e "  ${RED}${BOLD}║                                                                   ║${RESET}"
         echo -e "  ${RED}${BOLD}║   Run as a normal user with sudo privileges.                      ║${RESET}"
         echo -e "  ${RED}${BOLD}║   sudo will be used when needed.                                  ║${RESET}"
@@ -1428,7 +1423,7 @@ show_exit_message() {
     echo -e "${MAGENTA}${BOLD}"
     print_centered "╭─────────────────────────────────────────────────╮"
     print_centered "│                                                 │"
-    print_centered "│      Thank you for using OmGlass! 💜           │"
+    print_centered "│      Thank you for using CarmonyOS! 💜          │"
     print_centered "│                                                 │"
     print_centered "│           See you next time! 👋                 │"
     print_centered "│                                                 │"
@@ -1454,14 +1449,14 @@ show_about() {
     print_box_content "${WHITE}${BOLD}Version:${RESET}        ${CYAN}${VERSION}${RESET}" "$PURPLE"
     print_box_content "${WHITE}${BOLD}Codename:${RESET}       ${CYAN}${CODENAME}${RESET}" "$PURPLE"
     print_box_content "${WHITE}${BOLD}License:${RESET}        ${GRAY}MIT${RESET}" "$PURPLE"
-    print_box_content "${WHITE}${BOLD}Author:${RESET}         ${GRAY}Omarchy Team${RESET}" "$PURPLE"
+    print_box_content "${WHITE}${BOLD}Author:${RESET}         ${GRAY}CarmonyOS${RESET}" "$PURPLE"
     print_box_empty "$PURPLE"
     print_box_separator "$PURPLE"
     print_box_empty "$PURPLE"
-    print_box_content "${WHITE}OmGlass Manager is a beautiful installation script${RESET}" "$PURPLE"
+    print_box_content "${WHITE}CarmonyOS Manager is a beautiful installation script${RESET}" "$PURPLE"
     print_box_content "${WHITE}for setting up Hyprland with stunning configurations.${RESET}" "$PURPLE"
     print_box_empty "$PURPLE"
-    print_box_content "${DIM}Supports: Arch Linux, Ubuntu, Fedora, Omarchy${RESET}" "$PURPLE"
+    print_box_content "${DIM}Supports: Arch Linux, Ubuntu, Fedora, Omarchy, Nobara,${RESET}" "$PURPLE"
     print_box_empty "$PURPLE"
     print_box_separator "$PURPLE"
     print_box_empty "$PURPLE"
@@ -1492,7 +1487,7 @@ main() {
     check_sudo
     
     log "═══════════════════════════════════════════════════════════════"
-    log "OmGlass Manager ${VERSION} (${CODENAME}) started"
+    log "CarmonyOS ${VERSION} (${CODENAME}) started"
     log "Script directory: $SCRIPT_DIR"
     log "User: $(whoami)"
     log "Date: $(date)"
