@@ -3,9 +3,9 @@
 
 **Elevating Omarchy UI to the Next Level**
 
-OmGlass OS is a pro UI redesign for Linux Distros and (Omarhcy) . While the original Distros focuses on stability and reliability, CarmonyOS is built for those who crave aesthetics without compromising performance.
+CarmonyOS is a pro UI redesign for Linux Distros and (Omarhcy) . While the original Distros focuses on stability and reliability, CarmonyOS is built for those who crave aesthetics without compromising performance.
 
-Developed over 6 weeks of intensive design work, Carmony introduces the **Transparent & Prodictivity**—a unique blend of the sleek **Glass Style** aesthetic and the powerful foundations of Omarchy , EndeavorOS, Arch Linux, And More.
+Developed over 8 weeks of intensive design work, Carmony introduces the **Transparent & Prodictivity**—a unique blend of the sleek **Glass Style** aesthetic and the powerful foundations of Omarchy , EndeavorOS, Arch Linux, Fedora, And More.
 
 ---
 
@@ -41,10 +41,9 @@ This repository contains the configuration files for **Hyprland**, **Walker**, a
 
 ### 1. Hyprland (The Core)
 Located in `~/.config/hypr`:
-- `hyprland.conf` & `looknfeel.conf` (Visuals & Logic)
-- `bindings.conf` & `input.conf` (Controls)
+- `hyprland.conf` (Visuals & Logic)
 - `hyprlock.conf` & `hypridle.conf` (Security & Power)
-- `omarchy-control.py` (System Integration)
+- `CarmonyOS.py` (System Integration)
 
 ### 2. Waybar (Status Bar)
 Located in `~/.config/waybar/`:
