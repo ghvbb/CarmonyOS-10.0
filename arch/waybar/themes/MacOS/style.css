@@ -1,0 +1,519 @@
+@import "../../.cache/colors/colors.css";
+
+/* ═══════════════════════════════════════════════════════
+   Waybar · Classic Mac OS (System 7 / Mac OS 8) Style
+   Platinum appearance · Chicago font · Retro 90s vibes
+   Dynamic colors via @import · Tux Linux edition
+   ═══════════════════════════════════════════════════════ */
+
+* {
+    all: unset;
+    font-family: 'Chicago', 'ChicagoFLF', 'Charcoal', 'Geneva', 'Monaco', 'Liberation Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    -gtk-icon-style: symbolic;
+}
+
+/* ── Main bar: Platinum menu bar ── */
+
+window#waybar {
+    background: @surface_container;
+    color: @on_surface;
+    border-bottom: 1px solid @outline_variant;
+    box-shadow: inset 0  1px 0 alpha(@on_surface, 0.15),
+                inset 0 -1px 0 @outline_variant;
+}
+
+window#waybar.empty {
+    background: @surface_container;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+/* ── Tooltip: classic Mac help balloon ── */
+
+tooltip {
+    background: @surface_container_high;
+    border: 2px solid @on_surface;
+    border-radius: 0;
+    box-shadow: 2px 2px 0 @on_surface;
+}
+
+tooltip * {
+    background: transparent;
+}
+
+tooltip label {
+    color: @on_surface;
+    font-size: 11px;
+    padding: 4px 8px;
+}
+
+/* ═══════════════════════════════════
+   Tux Launcher (Linux Penguin)
+   ═══════════════════════════════════ */
+
+#custom-launcher {
+    color: @primary;
+    font-size: 16px;
+    padding: 0 10px 0 8px;
+    font-weight: bold;
+    border-right: 1px solid @outline_variant;
+    box-shadow: inset -1px 0 0 alpha(@on_surface, 0.1);
+}
+
+#custom-launcher:hover {
+    background: @primary_container;
+    color: @on_primary_container;
+}
+
+/* ═══════════════════════════════════
+   Workspaces: Mac OS window buttons
+   ═══════════════════════════════════ */
+
+#workspaces {
+    margin: 0 2px;
+    padding: 0;
+}
+
+#workspaces button {
+    color: @on_surface;
+    font-size: 11px;
+    padding: 2px 8px;
+    min-width: 8px;
+    min-height: 0;
+    margin: 2px 1px;
+    background: @surface_container;
+    border-top: 1px solid alpha(@on_surface, 0.15);
+    border-left: 1px solid alpha(@on_surface, 0.15);
+    border-right: 1px solid @outline_variant;
+    border-bottom: 1px solid @outline_variant;
+}
+
+#workspaces button:hover {
+    background: @surface_container_high;
+    color: @on_surface;
+}
+
+#workspaces button.active {
+    background: @primary;
+    color: @on_primary;
+    border-top: 1px solid @primary;
+    border-left: 1px solid @primary;
+    border-right: 1px solid alpha(@primary, 0.5);
+    border-bottom: 1px solid alpha(@primary, 0.5);
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: @error;
+    color: @on_error;
+    animation: mac-blink 0.6s step-end infinite;
+}
+
+@keyframes mac-blink {
+    50% { background: @error_container; color: @on_error_container; }
+}
+
+#workspaces button.visible {
+    background: @surface_container_highest;
+    color: @on_surface;
+    font-weight: bold;
+}
+
+#workspaces button.empty {
+    color: @outline;
+    background: @surface_container;
+}
+
+/* ═══════════════════════════════════
+   Separator: Classic Mac divider
+   ═══════════════════════════════════ */
+
+#custom-separator-dot {
+    color: @outline_variant;
+    font-size: 8px;
+    padding: 0 2px;
+}
+
+#custom-separator-left {
+    color: @outline_variant;
+    font-size: 9px;
+    padding: 0 1px;
+    margin: 3px 0;
+}
+
+/* ═══════════════════════════════════
+   Media player: Sunken field style
+   ═══════════════════════════════════ */
+
+#custom-media-player {
+    color: @on_surface;
+    font-size: 11px;
+    padding: 2px 10px;
+    margin: 2px 4px;
+    min-width: 180px;
+    background: @surface;
+    border-top: 1px solid @outline_variant;
+    border-left: 1px solid @outline_variant;
+    border-right: 1px solid alpha(@on_surface, 0.1);
+    border-bottom: 1px solid alpha(@on_surface, 0.1);
+    box-shadow: inset 1px 1px 0 alpha(@on_surface, 0.08);
+}
+
+#custom-media-player:hover {
+    background: @surface_container_low;
+}
+
+#custom-media-player.Paused {
+    color: @outline;
+    font-style: italic;
+}
+
+#custom-media-player.stopped {
+    color: alpha(@outline, 0.5);
+    padding: 2px 6px;
+}
+
+/* ═══════════════════════════════════
+   System Tray: Mac OS control strip
+   ═══════════════════════════════════ */
+
+#tray {
+    padding: 0 4px;
+    border-left: 1px solid @outline_variant;
+    box-shadow: inset 1px 0 0 alpha(@on_surface, 0.1);
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray menu {
+    background: @surface_container;
+    border: 2px solid @on_surface;
+    box-shadow: 2px 2px 0 alpha(@on_surface, 0.6);
+    border-radius: 0;
+    padding: 1px;
+}
+
+#tray menu menuitem {
+    color: @on_surface;
+    font-size: 11px;
+    padding: 2px 16px 2px 20px;
+    border-radius: 0;
+}
+
+#tray menu menuitem:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+#tray menu menuitem:disabled {
+    color: @outline;
+}
+
+#tray menu separator {
+    background: @outline_variant;
+    margin: 1px 0;
+    min-height: 1px;
+    box-shadow: 0 1px 0 alpha(@on_surface, 0.08);
+}
+
+/* ═══════════════════════════════════
+   Clock: Bold menu bar clock
+   ═══════════════════════════════════ */
+
+#clock {
+    color: @on_surface;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 10px;
+    letter-spacing: 0.3px;
+    border-left: 1px solid @outline_variant;
+    box-shadow: inset 1px 0 0 alpha(@on_surface, 0.1);
+}
+
+#clock:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+/* ═══════════════════════════════════
+   Network — distinct hover color
+   ═══════════════════════════════════ */
+
+#network {
+    color: @on_surface;
+    font-size: 13px;
+    padding: 0 6px;
+}
+
+#network:hover {
+    background: @on_surface;
+    color: @on_primary;
+}
+
+#network.wifi {
+    color: @secondary;
+    font-weight: bold;
+}
+
+#network.ethernet {
+    color: @tertiary;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    color: @outline;
+}
+
+#network.linked {
+    color: @on_surface_variant;
+}
+
+#network.disabled {
+    color: alpha(@outline, 0.4);
+}
+
+/* ═══════════════════════════════════
+   Bluetooth
+   ═══════════════════════════════════ */
+
+#bluetooth {
+    color: @on_surface;
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+#bluetooth:hover {
+    background: @tertiary;
+    color: @on_tertiary;
+}
+
+#bluetooth.connected {
+    color: @tertiary;
+    font-weight: bold;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @outline;
+}
+
+/* ═══════════════════════════════════
+   Volume / PulseAudio
+   ═══════════════════════════════════ */
+
+#pulseaudio {
+    color: @on_surface;
+    font-size: 13px;
+    padding: 0 6px;
+}
+
+#pulseaudio:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+#pulseaudio.muted {
+    color: @outline;
+}
+
+#pulseaudio.bluetooth {
+    color: @tertiary;
+}
+
+/* ═══════════════════════════════════
+   Backlight
+   ═══════════════════════════════════ */
+
+#backlight {
+    color: @on_surface;
+    font-size: 13px;
+    padding: 0 6px;
+}
+
+#backlight:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+/* ═══════════════════════════════════
+   Power button
+   ═══════════════════════════════════ */
+
+#custom-power {
+    color: @on_surface_variant;
+    font-size: 12px;
+    padding: 0 8px;
+    border-left: 1px solid @outline_variant;
+    box-shadow: inset 1px 0 0 alpha(@on_surface, 0.1);
+}
+
+#custom-power:hover {
+    background: @error;
+    color: @on_error;
+}
+
+/* ═══════════════════════════════════
+   Window title
+   ═══════════════════════════════════ */
+
+#window {
+    color: @on_surface_variant;
+    font-size: 11px;
+    padding: 0 8px;
+    font-style: italic;
+}
+
+#window:hover {
+    color: @on_surface;
+}
+
+#window.empty {
+    padding: 0;
+    min-width: 0;
+}
+
+/* ═══════════════════════════════════
+   Temperature
+   ═══════════════════════════════════ */
+
+#temperature {
+    color: @on_surface;
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+#temperature.warning {
+    color: @tertiary;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#temperature.critical {
+    color: @on_error;
+    background: @error;
+    font-weight: bold;
+}
+
+/* ═══════════════════════════════════
+   CPU / Memory
+   ═══════════════════════════════════ */
+
+#cpu,
+#memory {
+    color: @on_surface_variant;
+    font-size: 10px;
+    padding: 0 6px;
+}
+
+#cpu:hover,
+#memory:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+/* ═══════════════════════════════════
+   Idle inhibitor
+   ═══════════════════════════════════ */
+
+#idle_inhibitor {
+    color: @on_surface_variant;
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+#idle_inhibitor.activated {
+    color: @primary;
+    font-weight: bold;
+}
+
+#idle_inhibitor.deactivated {
+    color: @outline;
+}
+
+/* ═══════════════════════════════════
+   Language
+   ═══════════════════════════════════ */
+
+#language {
+    color: @on_surface;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 6px;
+    letter-spacing: 0.3px;
+}
+
+#language:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+/* ═══════════════════════════════════
+   Updates
+   ═══════════════════════════════════ */
+
+#custom-update {
+    color: @on_surface;
+    font-size: 11px;
+    padding: 0 6px;
+}
+
+#custom-update.pending {
+    color: @primary;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ═══════════════════════════════════
+   Screen recording indicator
+   ═══════════════════════════════════ */
+
+#custom-screenrecording-indicator {
+    color: @on_surface;
+    font-size: 11px;
+    padding: 0 6px;
+}
+
+#custom-screenrecording-indicator.recording {
+    color: @on_error;
+    background: @error;
+    font-weight: bold;
+}
+
+/* ═══════════════════════════════════
+   Tray toggle
+   ═══════════════════════════════════ */
+
+#group-tray-expander {
+    padding: 0;
+}
+
+#custom-tray-toggle {
+    color: @on_surface_variant;
+    font-size: 9px;
+    padding: 0 4px;
+}
+
+#custom-tray-toggle:hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+/* ═══════════════════════════════════
+   Fullscreen mode
+   ═══════════════════════════════════ */
+
+window#waybar.fullscreen {
+    background: alpha(@surface_container, 0.85);
+}
